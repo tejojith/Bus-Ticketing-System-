@@ -227,7 +227,7 @@ class main_level:
         final_price = (total_fare * passenger)
         self.tCost2.configure(text=final_price)
         return
-
+    #-------------------------------Defining all the specifications for the TKinter Frontend -----------------------------
 
     def __init__(self, top=None):
         top.geometry("732x443+327+147")
@@ -256,7 +256,7 @@ class main_level:
         ticket_number = characters
         ticketno.set(ticket_number)
 
-        bg = PhotoImage(file = r"C:\Users\Tejas\Downloads\COMP PROJECT\Tkinter program bus\bus4.png")
+        bg = PhotoImage(file = r"C:\bus4.png")
 
         self.frame_Booking_Panel = Frame(top)
         self.frame_Booking_Panel.place(relx=0.0, rely=0.0, relheight=1.0, relwidth=1.0)
@@ -462,19 +462,5 @@ print(f1,na,nc,bb,dc,final_price)
 
 str1 = "insert into bus_data values({},{},{},{},{},{});".format(f1,na,nc,bb,dc,final_price)
 cursor.execute(str1)
-
-# for some reason it doesnt work when this is there 
-
-'''
-cursor.execute('select * from bus_data;')
-
-data = cursor.fetchmany(15)
-
-for row in data:
-    for col in row:
-        print(col, end='\t')
-    print()
-'''
-
 
 conn.commit()
