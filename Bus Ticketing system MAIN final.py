@@ -441,7 +441,7 @@ start_gui()
 
 import mysql.connector as ms
 
-conn = ms.connect(host = "localhost", user = "root", passwd="2004", database ="project")
+conn = ms.connect(host = "localhost", user = "root", passwd="", database ="project")
 
 if conn.is_connected():
     print("Connected Succefully")
